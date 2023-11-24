@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Kiva Crowdfunding loan type </title>
+    </head>
+    
+<style>
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+
+input[type=submit] {
+  width: 80%;
+  background-color: red;
+  display: inline-block;
+  opacity: 0.7;
+  color:rgb(112, 23, 23);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size:100;
+  font-weight: bolder;
+}
+
+
+input[type=submit]:hover {
+  background-color: rgb(43, 37, 37);
+  display: inline-block;
+  opacity: 0.9;
+}
+form{
+    border-radius: 20px;
+    padding-top: 5%;
+    font-weight: bolder;
+}
+div {
+ 
+  border-radius: 5px;
+  margin-left: 35%;
+  width: 30%;
+  
+}
+h1{
+    color:color-blue;
+    font-size: 50px;
+    font-weight: bolder;
+}
+h3{
+  color: rgb(9, 86, 18);
+  font-size: 40px;
+  border-radius: 10px;
+  font-weight: bolder;
+  padding: 14px 20px;
+}
+
+body {
+            
+            background-image: url("static/images/kiva.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 0px;
+        }
+       
+</style>
+
+<body>
+
+<h1> Kiva Crowdfunding loan type </h1>
+
+<div>
+ 
+ <form action="/predict" method="post" style="background-color:#454545 ">
+
+<label for="loan">Loan Amount 💰</label><br>
+<input type="number" id="loan" name="loan" placeholder="For example: 580/270...." required="required"><br>
+
+<label for="term">Term (in_months)</label><br>
+<input type="number" id="term" name="term" placeholder="For example: 3/4 " required="required"><br>
+
+<label for="Male">Male (in count)	</label><br>
+<input type="number" id="Male" name="Male" placeholder="For example: 2/4/5...." required="required"><br>
+
+<label for="Female">Female (in count)	</label><br>
+<input type="number" id="Female" name="Female" placeholder="For example: 2/4/5...." required="required"><br>
+
+
+<label for="Country">Country </label><br>
+<select id="Country" name="Country">
+    <option value="0">0</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="32">32</option>
+    <option value="33">33</option>
+    <option value="34">34</option>
+    <option value="35">35</option>
+    <option value="36">36</option>
+    <option value="37">37</option>
+    <option value="38">38</option>
+    <option value="39">39</option>
+    <option value="40">40</option>
+    <option value="41">41</option>
+    <option value="42">42</option>
+    <option value="43">43</option>
+    <option value="44">44</option>
+    <option value="45">45</option>
+    <option value="46">46</option>
+    <option value="47">47</option>
+    <option value="48">48</option>
+    <option value="49">49</option>
+    <option value="50">50</option>
+    <option value="51">51</option>
+    <option value="52">52</option>
+    <option value="53">53</option>
+  
+    
+
+    </select><br>
+         
+<input type="submit" value="Classify Loan type">
+</form>
+</div>
+    
+
+<h3>{{ prediction }}</h3>
+
+</body>
+</html>
